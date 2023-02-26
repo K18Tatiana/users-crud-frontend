@@ -112,6 +112,18 @@ const UserForm = ( { setIsLoading, getUsers, successNotification, errorNotificat
             <Button type="submit" className="mt-3">
                 { titleUser }
             </Button>
+            {
+                userSelected 
+                && 
+                <Button 
+                onClick={deselectUser} 
+                variant="secondary" 
+                className="mt-3"
+                style={{ marginLeft: 10 }}
+                >
+                    Clear
+                </Button>
+            }
         </Form>
     )
 }
